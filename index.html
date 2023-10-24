@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="DisabledItems(true)">
+<div class="FormContainer">
+    <form name="vaccine" id="vaccine-form">
+        <h1>Vaccine Registration Form</h1>
+    <div class="PersonalTitle"><b>Personal Details</b></div>
+     <div class="PersonalDetails">
+        <div class="form-control">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="FirstName" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Middle Name</label>
+                <input type="text" name="MiddleName" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="LastName" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Birthday</label>
+                <input type="date" name="DOB" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <span style="margin-right: 300px;">Gender</span>
+                <label>
+                    Male
+                    <input type="radio" name="gender" value="Male" />
+                </label>
+                <label>
+                    Female
+                    <input type="radio" name="gender" value="Female" />
+                </label>
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Region</label>
+                <select name="region">
+                    <option value=""> -select one- </option>
+                    <option value="Region I - Ilocos Region">Region I - Ilocos Region</option>
+                    <option value="Region II - Cagayan Valley">Region II - Cagayan Valley</option>
+                    <option value="Region III - Central Luzon">Region III - Central Luzon</option>
+                    <option value="Region IV-A - CALABARZON">Region IV-A - CALABARZON</option>
+                    <option value="MIMAROPA Region">MIMAROPA Region</option>
+                    <option value="Region V - Bicol Region">Region V - Bicol Region</option>
+                    <option value="Region VI - Western Visayas">Region VI - Western Visayas</option>
+                    <option value="Region VII - Central Visayas">Region VII - Central Visayas</option>
+                    <option value="Region VIII - Eastern Visayas">Region VIII - Eastern Visayas</option>
+                    <option value="Region IX - Zamboanga Peninsula">Region IX - Zamboanga Peninsula</option>
+                    <option value="Region X - Northern Mindanao">Region X - Northern Mindanao</option>
+                    <option value="Region XI - Davao Region">Region XI - Davao Region</option>
+                    <option value="Region XII - SOCCSKSARGEN">Region XII - SOCCSKSARGEN</option>
+                    <option value="Region XIII - Caraga">Region XIII - Caraga</option>
+                    <option value="NCR - National Capital Region">NCR - National Capital Region</option>
+                    <option value="CAR - Cordillera Administrative Region">CAR - Cordillera Administrative Region</option>
+                    <option value="BARMM - Bangsamoro Autonomous Region in Muslim Mindanao">BARMM - Bangsamoro Autonomous Region in Muslim Mindanao</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Province</label>
+                <input type="text" name="province" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Barangay</label>
+                <input type="text" name="brgy" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Street</label>
+                <input type="text" name="street" />
+            </div>
+        </div>
+    </div>
+    <div class="VacTitle"><b>Vaccine Details</b></div>
+    <div class="VacDetails">
+        <div class="form-control">
+            <div>
+                <label>Vaccination Brand (Dose 1)</label>
+                <select name="dose1">
+                    <option value=""> -select one- </option>
+                    <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Coronavac">Coronavac</option>
+                    <option value="Sputnik V">Sputnik V</option>
+                    <option value="Janssen">Janssen</option>
+                    <option value="Covaxin">Covaxin</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Sinopharm">Sinopharm</option>
+                    <option value="Covovax">Covovax</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Date of Vaccination (Dose 1)</label>
+                <input type="date" name="DOV1" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Vaccination (Dose 1) Site</label>
+                <input type="text" name="vacSite1" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                Did you already get your second vaccination?
+                <label>
+                    Yes
+                    <input type="radio" name="didU" value="Yes" onclick="DisabledItems(false)" />
+                </label>
+                <label>
+                    No
+                    <input type="radio" name="didU" value="No" onclick="DisabledItems(true)" />
+                </label>
+            </div>
+        </div>
+        
+     <!-- Enabled if answer is "YES" -->   
+        <div class="form-control">
+            <div>
+                <label>Vaccination Brand (Dose 2)</label>
+                <select name="dose2">
+                    <option value=""> -select one- </option>
+                    <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Coronavac">Coronavac</option>
+                    <option value="Sputnik V">Sputnik V</option>
+                    <option value="Janssen">Janssen</option>
+                    <option value="Covaxin">Covaxin</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Sinopharm">Sinopharm</option>
+                    <option value="Covovax">Covovax</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Date of Vaccination (Dose 2)</label>
+                <input type="date" name="DOV2" />
+            </div>
+        </div>
+        <div class="form-control">
+            <div>
+                <label>Vaccination (Dose 2) Site</label>
+                <input type="text" name="vacSite2" />
+            </div>
+        </div>
+    <!-- ends here -->
+    </div>
+
+        <div class="form-control">
+            <button type="submit" name="submitBtn" id="myBtn">Submit</button>
+            <button type="reset" name="resetBtn" onclick="DisabledItems(true)">Reset</button>
+        </div>
+    </form>
+
+    <div id="myModal" class="modal">
+    <div class="modal-content" id="regDetails">
+
+    </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
